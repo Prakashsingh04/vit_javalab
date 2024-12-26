@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class LinkedList_learn2 {
-    public static void main(String[] args) {
+public class LinkedList_learn2{
+    public static void main(String[] args)  {
         LinkedList<Integer> nums=new LinkedList<>();
         nums.add(10);
         nums.add(41);
@@ -28,7 +28,12 @@ public class LinkedList_learn2 {
         System.out.println("After removing even: "+nums);
 
         System.out.println("after reversing:");
-        Collections.reverse(nums);
-        System.out.println(nums);
+       // Collections.reverse(nums);
+        LinkedList<Integer> reversenums=new LinkedList<>();
+        for(int x=nums.size()-1;x>=0;x--)
+        {
+            reversenums.add(nums.get(x));
+        }
+        System.out.println(reversenums);
     }
 }
